@@ -2,6 +2,7 @@ package tr.serhatkochan.personinformationsystemwithqrcode.webApi.controllers;
 
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import tr.serhatkochan.personinformationsystemwithqrcode.business.abstracts.UserService;
@@ -16,12 +17,13 @@ import java.util.List;
 public class UserController {
     private UserService userService;
 
-    @GetMapping
+    @GetMapping()
     public List<GetAllUsersResponse> getAll() {
         return userService.getAll();
     }
 
-    @PostMapping("/add")
+    @PostMapping()
+    @ResponseStatus(code = HttpStatus.CREATED)
     public void add(@RequestBody() CreateUserRequest createUserRequest) {
         userService.add(createUserRequest);
     }
