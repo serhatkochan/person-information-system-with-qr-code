@@ -17,7 +17,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
-@AllArgsConstructor // bunu neden kullanıyoruz ??
+@AllArgsConstructor
 public class UserManager implements UserService {
     private UserRepository userRepository;
     private ModelMapperService modelMapperService;

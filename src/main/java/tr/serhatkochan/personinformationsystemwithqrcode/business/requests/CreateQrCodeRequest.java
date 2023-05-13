@@ -11,9 +11,13 @@ import javax.validation.constraints.Size;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CreateUserRequest {
-    @NotNull // javax.validation.constraints
-    @NotBlank // FE sadece kullanıcı etkileşimini iyileştirmek için yapılır, zorunlu değildir.
+public class CreateQrCodeRequest {
+    @NotNull
+    @NotBlank
     @Size(min = 3, max = 20)
-    private String name;
+    private String title;
+
+    @NotNull
+    @NotBlank
+    private int userId;
 }

@@ -19,9 +19,11 @@ public class QrCode {
     @Column(name = "id") // yazılabilir ama gerek var mı bi kontrol et.
     private int id; // int, Integer, Long ???
 
-    private String name;
+    private String title;
 
     @ManyToOne
-    @JoinColumn(name = "brand_id")
+    @JoinColumn(name = "user_id")
     private User user;
+
+//    private string code; // @Column(name = "code", unique=true)
 }
