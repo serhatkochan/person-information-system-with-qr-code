@@ -8,7 +8,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class GetAllQrCodesResponse {
-    private int id;
+    private Integer id;
     private String title;
+    private String code;
     private String userName; // tabloda name şeklinde kayıtlı
 }

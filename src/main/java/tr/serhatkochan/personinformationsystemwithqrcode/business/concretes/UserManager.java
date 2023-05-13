@@ -33,7 +33,7 @@ public class UserManager implements UserService {
     }
 
     @Override
-    public GetByIdUserResponse getById(int id) {
+    public GetByIdUserResponse getById(Integer id) {
         Optional<User> user = userRepository.findById(id); // bulamazsa orElseThrow veya Optional yapacaz
 
         GetByIdUserResponse getByIdUserResponse = modelMapperService.forResponse()
@@ -54,7 +54,7 @@ public class UserManager implements UserService {
     }
 
     @Override
-    public void delete(int id) {
+    public void delete(Integer id) {
         userRepository.deleteById(id);
     }
 }

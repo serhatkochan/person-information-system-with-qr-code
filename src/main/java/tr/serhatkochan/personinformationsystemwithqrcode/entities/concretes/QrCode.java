@@ -17,13 +17,14 @@ public class QrCode {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id") // yazılabilir ama gerek var mı bi kontrol et.
-    private int id; // int, Integer, Long ???
+    private Integer id; // Integer, Integer, Long ???
 
     private String title;
+
+    @Column(name = "code", unique = true)
+    private String code;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
-
-//    private string code; // @Column(name = "code", unique=true)
 }

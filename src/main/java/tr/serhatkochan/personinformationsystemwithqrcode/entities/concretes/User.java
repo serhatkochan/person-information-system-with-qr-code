@@ -15,7 +15,7 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id") // yazılabilir ama gerek var mı bi kontrol et.
-    private int id; // int, Integer, Long ???
+    private Integer id; // Integer, Integer, Long ???
 
     private String name;
 

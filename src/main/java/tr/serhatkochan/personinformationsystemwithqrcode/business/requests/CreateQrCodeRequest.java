@@ -19,5 +19,8 @@ public class CreateQrCodeRequest {
 
     @NotNull
     @NotBlank
-    private int userId;
+    private String code;
+
+    @NotNull
+    private Integer userId;
 }
