@@ -15,6 +15,7 @@ import java.util.List;
 @AllArgsConstructor // bunu neden kullanıyoruz ??
 public class UserManager implements UserService {
     private UserRepository userRepository;
+
     @Override
     public List<GetAllUsersResponse> getAll() {
         List<User> users = userRepository.findAll();
