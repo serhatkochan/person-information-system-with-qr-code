@@ -17,7 +17,13 @@ public class User {
     @Column(name = "id") // yazılabilir ama gerek var mı bi kontrol et.
     private Integer id; // Integer, Integer, Long ???
 
+    private String username;
+
+    private String password;
+
     private String name;
+
+    private boolean isAdmin;
 
     @OneToMany(mappedBy = "user")
     private List<QrCode> qrCodes;

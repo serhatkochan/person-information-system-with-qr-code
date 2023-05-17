@@ -9,5 +9,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class GetByIdUserResponse {
     private Integer id;
+    private String username;
+    private String password;
     private String name;
+    private boolean isAdmin;
 }

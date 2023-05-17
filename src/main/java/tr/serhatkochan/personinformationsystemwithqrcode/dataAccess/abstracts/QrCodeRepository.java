@@ -5,4 +5,5 @@ import tr.serhatkochan.personinformationsystemwithqrcode.entities.concretes.QrCo
 
 public interface QrCodeRepository extends JpaRepository<QrCode, Integer> {
     boolean existsByCode(String code); // spring Jpa keyword
+    QrCode findByCode(String code);
 }

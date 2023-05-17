@@ -7,10 +7,10 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class GetAllUsersResponse {
+public class GetByCodeQrCodesResponse {
     private Integer id;
-    private String username;
-    private String password;
-    private String name;
-    private boolean isAdmin;
+    private String title;
+    private String code;
+    private String userId; // tabloda id şeklinde kayıtlı
+    private String userName; // tabloda name şeklinde kayıtlı
 }
